@@ -10,7 +10,7 @@ os: Provides functions to interact with the operating system (used to set the wo
 Document from the docx library: Allows manipulation of Word documents.
 BartTokenizer and BartForConditionalGeneration from the transformers library: These are components of the Hugging Face Transformers library, used to work with the BART model.
 
-# optional:Set the working directory
+# Optional:Set the working directory
 
 This code snippet uses os.chdir("YOUR/DIR") to change the working directory to the specified path. You need to replace "YOUR/DIR" with the actual directory path containing the input Word file.
 Load pre-trained BART model:
