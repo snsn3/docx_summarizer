@@ -1,4 +1,4 @@
-# Summarize lengthy word documents using Python
+# Summarize lengthy word documents using python
 This code performs text summarization using the BART (Bidirectional and Auto-Regressive Transformers) model. It takes a long text document in a Word file format (.docx), processes the content, generates a summary using the BART model, and then saves the summary to a new Word file. Quick explanation below.
 
 # Mostly useful for: Creating abstracts for academic papers
