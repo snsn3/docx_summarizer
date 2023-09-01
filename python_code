@@ -1,0 +1,37 @@
+# -*- coding: utf-8 -*-
+"""
+
+@author: stany
+"""
+
+import os
+from docx import Document
+from transformers import BartTokenizer, BartForConditionalGeneration
+
+# If needed: change your working directory
+os.chdir("YOUR/DIR")
+
+# Load pre-trained BART model
+tokenizer = BartTokenizer.from_pretrained('facebook/bart-large-cnn')
+model = BartForConditionalGeneration.from_pretrained('facebook/bart-large-cnn')
+
+# Read the content from the Word file
+document = Document("exemple_texte_long.docx")
+text_to_summarize = "\n".join([para.text for para in document.paragraphs])
+
+# Encode the text
+inputs = tokenizer([text_to_summarize], max_length=1024, return_tensors='pt', truncation=True)
+
+# Generate the summary
+summary_ids = model.generate(inputs.input_ids, num_beams=4, min_length=300, max_length=1000, early_stopping=True)
+
+# Decode the summary
+summary = tokenizer.decode(summary_ids[0], skip_special_tokens=True)
+
+# Print the summary (optional)
+print(summary)
+
+# Save the summary to a new Word file
+summary_doc = Document()
+summary_doc.add_paragraph(summary)
+summary_doc.save("voici_mon_sommaire.docx")
