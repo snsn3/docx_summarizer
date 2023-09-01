@@ -1,13 +1,16 @@
 # Summarize lengthy word documents using Python
 This code performs text summarization using the BART (Bidirectional and Auto-Regressive Transformers) model. It takes a long text document in a Word file format (.docx), processes the content, generates a summary using the BART model, and then saves the summary to a new Word file. Quick explanation below.
 
-# Import necessary libraries:
+# Mostly useful for: Creating abstracts for academic papers
+Creates nice and very acurate abstracts for academic papers by reading from the intro to conclusion.
+
+# Import necessary libraries
 
 os: Provides functions to interact with the operating system (used to set the working directory).
 Document from the docx library: Allows manipulation of Word documents.
 BartTokenizer and BartForConditionalGeneration from the transformers library: These are components of the Hugging Face Transformers library, used to work with the BART model.
 
-# optional:Set the working directory:
+# optional:Set the working directory
 
 This code snippet uses os.chdir("YOUR/DIR") to change the working directory to the specified path. You need to replace "YOUR/DIR" with the actual directory path containing the input Word file.
 Load pre-trained BART model:
@@ -19,7 +22,7 @@ Read the content from the Word file:
 The code opens the Word document named "exemple_texte_long.docx" using the Document class from the docx library.
 It extracts the text from each paragraph and joins them into a single string named text_to_summarize.
 
-# Encode the text:
+# Encode the text
 
 The text to be summarized (text_to_summarize) is encoded using the BART tokenizer. It's converted into tokenized and numerical format suitable for feeding into the BART model.
 tokenizer encodes the text and returns an object with token IDs and other information.
@@ -34,7 +37,7 @@ Print the summary (optional):
 
 The summarized text is printed to the console using print(summary).
 
-# Save the summary to a new Word file:
+# Save the summary to a new Word file
 
 A new Document object is created to hold the summary.
 The summary text is added as a paragraph to the new document.
