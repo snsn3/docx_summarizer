@@ -2,16 +2,17 @@
 """
 
 @author: stany
+
 """
 
-import os
+import os #only use if needed - utiliser au besoin
 from docx import Document
 from transformers import BartTokenizer, BartForConditionalGeneration
 
-# If needed: change your working directory
+# If needed: change your working directory - au besoin
 os.chdir("YOUR/DIR")
 
-# Load pre-trained BART model
+# Load pre-trained BART model - from FB
 tokenizer = BartTokenizer.from_pretrained('facebook/bart-large-cnn')
 model = BartForConditionalGeneration.from_pretrained('facebook/bart-large-cnn')
 
