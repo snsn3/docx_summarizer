@@ -2,7 +2,7 @@
 This code performs text summarization using the BART (Bidirectional and Auto-Regressive Transformers) model. It takes a long text document in a Word file format (.docx), processes the content, generates a summary using the BART model, and then saves the summary to a new Word file. Quick explanation below.
 
 # Mostly useful for: Creating abstracts for academic papers
-Creates nice and very acurate abstracts for academic papers by reading from the intro to conclusion.
+Creates nice and very acurate abstracts for academic papers by reading from the intro to conclusion. The model will take the most representative part of your text. You can iterate through the desired length of the document summary (example given here is 200 words, which is standard length for journal paper abstracts)
 
 # Import necessary libraries
 
