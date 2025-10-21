@@ -42,3 +42,6 @@ The summarized text is printed to the console using print(summary).
 A new Document object is created to hold the summary.
 The summary text is added as a paragraph to the new document.
 The new document is saved as "voici_mon_sommaire.docx".
+
+# Funding
+My doctoral research is funded by Canada's Social Sciences and Humanities Research Council (SSHRC) through the [Canada Vanier Graduate Scholarships](https://vanier.gc.ca/en/home-accueil.html)
